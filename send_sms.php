@@ -36,7 +36,7 @@ $now = Carbon::now('Indian/Maldives')->toDateTimeString();
 
 		if ($message != "") {
 
-			$dir = 'sqlite:database.sqlite';
+		$dir = 'sqlite:../../storage/database.sqlite';
  			$dbh = new PDO($dir) or die("cannot open database");
  	
  	

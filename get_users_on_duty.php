@@ -30,7 +30,7 @@ $now = Carbon::now()->addHours('5');
 
     	if( $int_hour < '7' or $int_hour > '18'){
 
-    		    	$dir = 'sqlite:database.sqlite';
+$dir = 'sqlite:../../storage/database.sqlite';
  $dbh = new PDO($dir) or die("cannot open database");
  $query = "SELECT * FROM users INNER JOIN types ON users.type_id=types.type_id  WHERE (users.duty='1')
 

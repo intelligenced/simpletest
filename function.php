@@ -88,8 +88,7 @@ $test = $carbontime->diffForHumans();
         return date('F Y', $ts);
     }
 }
- 
-$dir = 'sqlite:database.sqlite';
+ $dir = 'sqlite:../../storage/database.sqlite';
  $dbh = new PDO($dir) or die("cannot open database");
  $query = "SELECT users.name,users.number,types.type_name,logs.message,logs.created_at FROM users  INNER JOIN logs ON users.number=logs.user_details  INNER JOIN types ON users.type_id=types.type_id ORDER BY logs.created_at DESC LIMIT 5
 
